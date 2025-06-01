@@ -123,7 +123,7 @@ func (self *Game) Update() error {
 		// C4
 		audioPlayer, err := self.AudioContext.NewPlayer(&Stream{freq: 261.6256})
 		if err != nil {
-			logger.Fatal(err)
+			log.Fatal(err)
 		}
 		audioPlayer.SetVolume(volume * 1.3)
 		audioPlayer.Play()
@@ -133,7 +133,7 @@ func (self *Game) Update() error {
 		// C5
 		audioPlayer2, err := self.AudioContext.NewPlayer(&Stream{freq: 523.2511})
 		if err != nil {
-			logger.Fatal(err)
+			log.Fatal(err)
 		}
 		audioPlayer2.SetVolume(volume * 1.3)
 		audioPlayer2.Play()
@@ -187,7 +187,7 @@ func (self *Game) Update() error {
 		// A4
 		audioPlayer, err := self.AudioContext.NewPlayer(&Stream{freq: 440})
 		if err != nil {
-			logger.Fatal(err)
+			log.Fatal(err)
 		}
 		audioPlayer.SetVolume(volume)
 		audioPlayer.Play()
@@ -202,7 +202,7 @@ func (self *Game) Update() error {
 		// G4
 		audioPlayer, err := self.AudioContext.NewPlayer(&Stream{freq: 391.9954})
 		if err != nil {
-			logger.Fatal(err)
+			log.Fatal(err)
 		}
 		audioPlayer.SetVolume(volume)
 		audioPlayer.Play()
@@ -217,7 +217,7 @@ func (self *Game) Update() error {
 		// F#4
 		audioPlayer, err := self.AudioContext.NewPlayer(&Stream{freq: 369.9944})
 		if err != nil {
-			logger.Fatal(err)
+			log.Fatal(err)
 		}
 		audioPlayer.SetVolume(volume)
 		audioPlayer.Play()
@@ -232,7 +232,7 @@ func (self *Game) Update() error {
 		// E4
 		audioPlayer, err := self.AudioContext.NewPlayer(&Stream{freq: 329.6276})
 		if err != nil {
-			logger.Fatal(err)
+			log.Fatal(err)
 		}
 		audioPlayer.SetVolume(volume)
 		audioPlayer.Play()
