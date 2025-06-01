@@ -2,14 +2,13 @@ package main
 
 import (
 	"bytes"
-	"math/rand"
 	"fmt"
 	"image/color"
+	"log"
 	"math"
-	"os"
+	"math/rand"
 	"time"
 
-	"github.com/charmbracelet/log"
 	"github.com/hajimehoshi/ebiten/examples/resources/fonts"
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/hajimehoshi/ebiten/v2/audio"
@@ -79,8 +78,6 @@ func (self Direction) String() string {
 	default: return ""
 	}
 }
-
-var logger *log.Logger
 
 type Player struct {
 	Body []*BodyPart
@@ -306,11 +303,6 @@ func (self *Game) Layout(outsideWidth, outsideHeight int) (int, int) {
 }
 
 func main() {
-	logger = log.NewWithOptions(os.Stderr, log.Options{
-		ReportCaller: true,
-		ReportTimestamp: true,
-		TimeFormat: time.Kitchen,
-	})
 	ebiten.SetWindowTitle("Game")
 	ebiten.SetWindowSize(1920, 1080)
 
@@ -333,6 +325,6 @@ func main() {
 	}
 
 	if err := ebiten.RunGame(game); err != nil {
-		logger.Fatal(err)
+		log.Fatal(err)
 	}
 }
